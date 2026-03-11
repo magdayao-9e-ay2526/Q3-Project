@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q3 Project:eSakayMo Fare Guide</title>
-    
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<title>eSakayMo Fare Guide</title>
 
+<link rel="stylesheet" href="styles.css">
+
+<script src="proj.js"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+<h2>🚆 eSakayMo</h2>
+<a href="index.html">Home</a>
+<a href="#">Fare Matrix</a>
+<a href="#">Schedule</a>
+<a href="#">Help</a>
+<a href="registration.html">Create Account</a>
+</nav>
+
+<div class="container">
+
+<h1>Welcome to eSakayMo Fare Guide</h1>
+
+<p>Enter the distance of your train ride to estimate the fare.</p>
+
+<!-- Fare Calculator -->
+
+<label>Distance (KM):</label>
+<input type="number" id="distance">
+
+<br><br>
+
+<button onclick="regularFare()">Regular Fare</button>
+
+<button onclick="discountFare()">Discounted Fare</button>
+
+<h2 id="fare">Fare: ₱0</h2>
+
+</div>
+
+<footer>
+
+<p>Student Name | Grade & Section ©2026</p>
+
+<p>
+Source:
+<a href="https://www.metrolinemap.com/metro/manila/">
+Metro Line Map
+</a>
+</p>
+
+</footer>
+
+</body>
+</html>
