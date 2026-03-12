@@ -1,41 +1,56 @@
 body{
-font-family: Arial;
-margin:0;
-background:#f2f2f2;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-nav{
-background:#222;
-color:white;
-padding:10px;
+/* Form Container */
+.form-box{
+    background-color: #8cc7c7;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
 }
 
-nav a{
-color:white;
-margin:10px;
+/* Title */
+h2{
+    text-align: center;
 }
 
-.container{
-padding:30px;
-text-align:center;
-}
-
+/* Inputs */
 input{
-padding:8px;
-margin:5px;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
+/* Row for Age and Contact */
+.row{
+    display: flex;
+    gap: 10px;
+}
+
+.row input{
+    width: 100%;
+}
+
+/* Button */
 button{
-padding:10px;
-margin:5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #2c6e6e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:10px;
-position:fixed;
-bottom:0;
-width:100%;
+button:hover{
+    background-color: #1e4f4f;
 }
