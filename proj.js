@@ -3,7 +3,6 @@ var basefare = 50;
 var perKMrate = 15;  
 var baseKM = 2;      
 
-
 function regularFare() {
     // Get distance from the input field
     var distance = document.getElementById("distance").value;
@@ -15,11 +14,9 @@ function regularFare() {
     } else {
         fare = basefare + ((distance - baseKM) * perKMrate);
     }
-
-    
+ 
     var finalFare = Math.round(fare);
 
-    
     document.getElementById("fare").innerHTML = "Fare: ₱" + finalFare;
 }
 
