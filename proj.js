@@ -1,47 +1,47 @@
-// Fare variables
-var basefare = 50;
-var perKMrate = 15;
-var baseKM = 2;
+// Fare variables 
+var basefare = 50;   
+var perKMrate = 15;  
+var baseKM = 2;      
 
-// Regular fare calculation
-function regularFare(){
 
-var distance = document.getElementById("distance").value;
+function regularFare() {
+    // Get distance from the input field
+    var distance = document.getElementById("distance").value;
+    var fare;
 
-var fare;
+    // Calculation logic
+    if (distance <= baseKM) {
+        fare = basefare;
+    } else {
+        fare = basefare + ((distance - baseKM) * perKMrate);
+    }
 
-if(distance <= baseKM){
-fare = basefare;
-}
+    
+    var finalFare = Math.round(fare);
 
-else{
-fare = basefare + ((distance - baseKM) * perKMrate);
-}
-
-document.getElementById("fare").innerHTML =
-"Fare: ₱" + fare;
-
+    
+    document.getElementById("fare").innerHTML = "Fare: ₱" + finalFare;
 }
 
 // Discounted fare calculation
-function discountFare(){
+function discountFare() {
+    var distance = document.getElementById("distance").value;
+    var fare;
 
-var distance = document.getElementById("distance").value;
+    if (distance <= baseKM) {
+        fare = basefare;
+    } else {
+        fare = basefare + ((distance - baseKM) * perKMrate);
+    }
 
-var fare;
+    
+    fare = fare * 0.80;
 
-if(distance <= baseKM){
-fare = basefare;
+    // Requirement: Math.methods
+    var finalDiscount = Math.round(fare);
+
+    document.getElementById("fare").innerHTML = "Discounted Fare: ₱" + finalDiscount;
 }
 
-else{
-fare = basefare + ((distance - baseKM) * perKMrate);
-}
-
-// apply 20% discount
-fare = fare * 0.80;
-
-document.getElementById("fare").innerHTML =
-"Fare: ₱" + fare;
-
+function verifyEmail() {
 }
